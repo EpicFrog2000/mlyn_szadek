@@ -8,6 +8,9 @@
 @custom-variant dark (&:is(.dark *));
 
 
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
 @font-face {
   font-family: Corbel;
   src: url('/fonts/CORBEL.TTF') format("truetype");

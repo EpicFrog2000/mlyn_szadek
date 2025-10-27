@@ -6,6 +6,7 @@ import { onMounted } from 'vue'
 
 onMounted(() => document.body.className = 'bg-background')
 
+
 </script>
 
 <template>
@@ -30,14 +31,14 @@ onMounted(() => document.body.className = 'bg-background')
 
     <div class="h-24"></div>
 
-    <div class="grid grid-cols-1 grid-rows-1">
+    <div class="lg:grid grid-cols-1 grid-rows-1">
         <div class="row-1 col-1 relative z-10">
-            <div class="grid grid-cols-3 grid-rows-1 px-8 lg:px-32 ">
+            <div class="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-1 px-8 lg:px-32 gap-10">
                 <div class="flex flex-col gap-10 items-center text-center">
                     <span class="text-primary text-3xl leading-normal font-bold">
                         Tradycja
                     </span>
-                    <span class="text-primary font-corbel text-lg leading-normal font-normal w-[65%]">
+                    <span class="text-primary font-corbel text-lg leading-normal font-normal lg:w-[65%]">
                         Mąka Szadkowska to nie tylko mąka – to wspomnienie rodzinnych chwil, zapach pieczonego chleba i ciepło domowego stołu. Nasza mąka towarzyszy Polakom
                         od pokoleń – używana przez babcie, polecana przez mamy, dziś trafia do rąk kolejnych gospodyń i gospodarzy.
                         Tradycja to dla nas nie tylko sposób mielenia zboża, ale też sposób myślenia o jedzeniu: jako o czymś, co łączy ludzi.
@@ -51,17 +52,17 @@ onMounted(() => document.body.className = 'bg-background')
                     <span class="text-primary text-3xl leading-normal font-bold">
                         Jakość
                     </span>
-                    <span class="text-primary font-corbel text-lg leading-normal font-normal w-[65%]">
+                    <span class="text-primary font-corbel text-lg leading-normal font-normal lg:w-[65%]">
                         Mąka Szadkowska powstaje z najwyższej jakości lokalnych zbóż, starannie wyselekcjonowanych i przetwarzanych
                         w nowoczesnym młynie, z zachowaniem rodzinnych receptur. Pracujemy w systemie „Jakość Tradycja”,
                         co oznacza, że korzystamy wyłącznie z surowców, których pochodzenie jest w pełni identyfikowalne. Nasze produkty są wolne od GMO, a każdy etap produkcji podlega starannej kontroli jakości. Dzięki temu mamy pewność, że każda partia mąki zachowuje swoje naturalne walory wypiekowe i spełnia oczekiwania nawet najbardziej wymagających konsumentów.
                     </span>
                 </div>
 
-                <div class="h-24"></div>
+                <div class="lg:h-24"></div>
             </div>
 
-            <div class="flex flex-col relative z-10 items-center text-center lg:w-[40%] mx-auto gap-10 pt-5">
+            <div class="flex flex-col relative z-10 items-center text-center lg:w-[40%] mx-auto gap-10 pt-5 px-8 lg:px-32">
                 <div class="h-px bg-primary w-[70%]"></div>
                 <div class="flex flex-row items-center">
                     <img src="/images/maka_small_spoon.svg" loading="lazy" width="110" class="hidden lg:block lg:absolute left-0"/>
@@ -75,8 +76,8 @@ onMounted(() => document.body.className = 'bg-background')
                 </span>
             </div>
         </div>
-        <div class="w-full h-auto overflow-hidden grid grid-cols-1 grid-rows-1 relative z-5 row-1 col-1 pt-[35%]">
-            <img class="w-full h-full row-1 col-1" src="/images/tlo_wiatraki.png" loading="lazy" width="1920" height="100%"/>
+        <div class="w-full h-auto overflow-hidden grid grid-cols-1 grid-rows-1 relative z-5 row-1 col-1 lg:pt-[35%]">
+            <img class="w-full h-full aspect-ratio-16/9 object-cover row-1 col-1" src="/images/tlo_wiatraki.png" loading="lazy" width="1920"/>
             <div class="bg-linear-to-b from-background from-30% to-transparent to-65% row-1 col-1 absolute inset-0"></div>
             <div class="bg-linear-to-t from-background from-10% to-transparent to-45% row-1 col-1 absolute inset-0"></div>
         </div>
@@ -84,7 +85,7 @@ onMounted(() => document.body.className = 'bg-background')
     </div>
 
 
-    <div class="flex flex-col items-center justify-center m-auto w-[80%]">
+    <div class="flex flex-col items-center justify-center m-auto lg:w-[80%] px-8 lg:px-32">
         <div class="flex flex-col justify-center items-center align-middle gap-15">
             <div class="flex flex-col justify-center items-center align-middle">
                 <span class="font-corbel text-lg font-bold leading-normal text-primary text-center">
@@ -104,14 +105,14 @@ onMounted(() => document.body.className = 'bg-background')
         </div>
         <div class="h-15"></div>
         <div class="flex flex-col lg:flex-row gap-12 items-center">
-            <div class="rounded-lg overflow-clip h-full">
-                <img src="/images/img_tmp_home1.jpg" loading="lazy" class="object-cover lg:h-128"/>
+            <div class="overflow-clip h-full lg:h-128" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000' }">
+                <img src="/images/img_tmp_home1.jpg" loading="lazy" class="object-cover h-full rounded-lg"/>
             </div>
-            <div class="rounded-lg overflow-clip h-full">
-                <img src="/images/img_tmp_home.jpg" loading="lazy" class="object-cover lg:h-182"/>
+            <div class="overflow-clip h-full lg:h-182" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000' }">
+                <img src="/images/img_tmp_home.jpg" loading="lazy" class="object-cover h-full rounded-lg"/>
             </div>
-            <div class="rounded-lg overflow-clip h-full">
-                <img src="/images/img_tmp_home2.jpg" loading="lazy" class="object-cover lg:h-128"/>
+            <div class="overflow-clip h-full lg:h-128" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000' }">
+                <img src="/images/img_tmp_home2.jpg" loading="lazy" class="object-cover h-full rounded-lg"/>
             </div>
         </div>
     </div>
@@ -136,7 +137,7 @@ onMounted(() => document.body.className = 'bg-background')
             </span>
         </div>
         <div class="h-11"></div>
-        <div class="flex flex-col items-center justify-center lg:grid lg:grid-cols-3 lg:grid-rows-1 align-middle w-full">
+        <div class="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-1 w-full items-center justify-center gap-10">
             <div class="flex flex-col text-primary lg:ml-auto">
                 <span class="font-barlow text-3xl font-normal">
                     01
@@ -151,7 +152,7 @@ onMounted(() => document.body.className = 'bg-background')
                     Klient detaliczny
                 </span>
             </div>
-            <div class="flex flex-row justify-center">
+            <div class="flex flex-row justify-center m-auto max-w-[80%]">
                 <img src="/images/maka_przenna_szadkowska_do_domu.png" width="345" loading="lazy"/>
             </div>
             <div class="lg:mr-auto">
@@ -167,5 +168,3 @@ onMounted(() => document.body.className = 'bg-background')
     <div class="h-24"></div>
 
 </template>
-
-
