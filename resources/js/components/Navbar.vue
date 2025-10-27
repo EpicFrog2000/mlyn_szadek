@@ -18,12 +18,14 @@ const selectedMenuItem = ref({});
 </script>
 
 <template>
-    <div class="card text-white flex flex-row justify-between align-middle items-center px-8 py-8 md:px-32">
+    <div class="card text-white flex flex-row justify-between align-middle items-center px-8 py-8 lg:px-32 fixed w-full z-50">
         <div class="hidden md:flex flex-row gap-12 align-middle items-center">
             <Link :class="'text-nowrap text-primary'">ODWIEDŹ MŁYN</Link>
             <Link :class="'text-nowrap'">NASZE MĄKI</Link>
         </div>
-        <Image src="/images/logo_white.svg" alt="Image" width="130" class="min-w-[130px]"/>
+        <Link href="/" class="min-w-[100px]">
+            <Image src="/images/logo_white.svg" alt="Image" width="130" class="min-w-[100px]"/>
+        </Link>
 
         <div class="hidden md:flex flex-row gap-12 align-middle items-center">
             <Select
@@ -49,7 +51,7 @@ const selectedMenuItem = ref({});
                 </template>
             </Select>
 
-            <Link :class="'text-primary'">KONTAKT</Link>
+            <Link href="/kontakt" :class="'text-primary'">KONTAKT</Link>
             <Select
                 v-model="selectedLanguage"
                 :options="languages"

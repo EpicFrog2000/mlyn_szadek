@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: Corbel;
-  src: url('/fonts/Corbel-Bold-Italic.ttf') format("truetype");
+  src: url('/fonts/Corbel Bold Italic.ttf') format("truetype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -58,7 +58,7 @@
 
 @font-face {
   font-family: Corbel;
-  src: url('/fonts/Corbel-Italic.ttf') format("truetype");
+  src: url('/fonts/Corbel Italic.ttf') format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -66,7 +66,7 @@
 
 @font-face {
   font-family: Corbel;
-  src: url('/fonts/Corbel-Bold.ttf') format("truetype");
+  src: url('/fonts/Corbel Bold.ttf') format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -95,7 +95,7 @@
 }
 @font-face {
   font-family: 'Corbel';
-  src: url('/fonts/Corbel-Bold-Italic.ttf') format('truetype');
+  src: url('/fonts/Corbel Bold Italic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -123,14 +123,14 @@
 }
 @font-face {
   font-family: 'Corbel';
-  src: url('/fonts/Corbel-Italic.ttf') format('truetype');
+  src: url('/fonts/Corbel Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Corbel';
-  src: url('/fonts/Corbel-Bold.ttf') format('truetype');
+  src: url('/fonts/Corbel Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -403,6 +403,8 @@
     --color-dodatkowy: #927459;
     --color-teksty_historia: #DDC6B5;
     --color-tlo_produkty: #F2E7CD;
+    --color-contact: #BF9677;
+    --color-form_bg: #644D3C;
 
     --font-platypi: 'Platypi Variablefont Wght', ui-sans-serif, system-ui, sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
@@ -413,4 +415,8 @@
     --font-barlow: 'Barlow', ui-sans-serif, system-ui, sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
+}
+
+body{
+    transition: all 0.3s ease;
 }

@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import { Link } from '@inertiajs/vue3'
+import { Ripple } from 'primevue'
+
 
 const props = defineProps({
 	href: String,
 	onClick: Function,
+    submit: Boolean,
 	type: {
 		type: String,
 		default: 'primary'
 	},
-	disabled: {
+    disabled: {
 		type: Boolean,
 		default: false
 	}
@@ -16,23 +19,27 @@ const props = defineProps({
 
 const getClass = (type: string) => {
 	switch (type) {
-		case 'primary': return 'bg-primary text-background'
-        case 'background': return 'bg-background text-primary'
-		case 'primary_border': return 'bg-primary text-background border-1'
-		default: return 'bg-primary text-background'
+		case 'primary': return 'bg-primary text-background py-3'
+        case 'background': return 'bg-background text-primary py-3'
+        case 'thin_background': return 'bg-background text-primary py-1'
+		case 'primary_border': return 'bg-primary text-background border-1 py-3'
+		default: return 'bg-primary text-background py-3'
 	}
 }
 </script>
 
 <template>
 	<component
-		:is="props.href ? Link : 'button'"
+		:is="'button'"
 		:href="props.href"
 		@click="props.onClick"
 		:disabled="props.disabled"
-		class="py-3 px-7 rounded-md font-corbel cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+		class="px-7 rounded-md font-corbel cursor-pointer disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed p-ripple"
 		:class="getClass(props.type)"
-	>
+        :type="props.submit ?? 'submit'"
+        v-ripple
+        style="--p-ripple-background: var(--color-primary)"
+    >
 		<slot />
 	</component>
 </template>
