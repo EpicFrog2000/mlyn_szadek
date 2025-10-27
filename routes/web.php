@@ -7,8 +7,12 @@ use Illuminate\Http\Request;
 use Nette\NotImplementedException;
 
 Route::get('/', function () {
-    return Inertia::render('Welcome');
+    return Inertia::render('Home');
 })->name('home');
+
+Route::get('/OdwiedzMlyn', function () {
+    return Inertia::render('OdwiedzMlyn');
+})->name('OdwiedzMlyn');
 
 Route::get('/kontakt', function () {
     return Inertia::render('Contact');

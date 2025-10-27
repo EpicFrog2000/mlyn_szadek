@@ -1,0 +1,116 @@
+<script setup lang="ts">
+import Button_1 from '../components/Button_1.vue';
+
+import { onMounted } from 'vue'
+
+onMounted(() => document.body.className = 'bg-dodatkowy')
+
+</script>
+
+<template>
+    <div class="h-64"></div>
+    <div class="flex felx-wrap px-8 lg:px-32 gap-24">
+        <div class="font-platypi text-7xl leading-normal font-light w-1/2 text-background">
+            Historia Naszego Młyna sięga 1921 roku...
+        </div>
+        <div class="w-1/2 font-corbel font-light leading-normal text-5xl text-secondary">
+            ...kiedy to pierwsze ziarna zostały zmielone w rodzinnym młynie, zbudowanym z pasji do rzemiosła i szacunku do pracy z ziemią.
+        </div>
+    </div>
+
+    <div class="h-64"></div>
+
+    <div class="bg-form_bg flex lg:flex-row flex-col px-8 lg:px-32 text-background w-full items-center gap-20 py-16">
+        <div>
+            <div class="font-barlow text-2xl font-normal">
+                CZĘŚĆ&nbsp;01
+            </div>
+            <div class="h-9"></div>
+            <div class="font-platypi text-5xl font-light">
+                Początki
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 grid-rows-1 w-full h-[70vh] relative">
+            <img src="/images/img_tmp_home1.jpg" alt="Image" width="380" class="place-self-center object-cover col-1 row-1 aspect-380/525 rounded-lg z-10"/>
+            <div class="hidden lg:flex col-1 row-1 h-full w-full relative z-5">
+                <img src="/images/bg_element_small_om.svg" loading="lazy" class="absolute top-0 left-0"/>
+                <img src="/images/bg_element_klos.png" loading="lazy" class="absolute bottom-0 right-0"/>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-10 font-barlow">
+            <div class="text-8xl font-normal">
+                ROK <b class="font-bold">1921</b>
+            </div>
+            <div class="text-secondary font-corbel text-lg font-normal leading-[120%] w-[65%]">
+                Przez dekady Nasz Młyn ewoluował, odpowiadając na potrzeby kolejnych pokoleń. Z małej, lokalnej działalności rozwinęliśmy się w nowoczesne przedsiębiorstwo, które wciąż opiera się na tych samych wartościach: tradycji, jakości i szacunku do środowiska.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-background py-16 px-8 lg:px-32 relative">
+        <div class="relative w-full">
+            <div class="flex flex-col items-center gap-16 text-center font-platypi text-5xl font-light text-primary w-[60%] m-auto">
+                Rodzinne receptury<br/>
+                i&nbsp;odpowiedzialne podejście do surowca
+                <div class="flex flex-col items-center">
+                    <img src="/images/separator_under_text.svg" loading="lazy"/>
+                    <img src="/images/small_windmill_primary.svg" loading="lazy"/>
+                </div>
+            </div>
+            <div class="h-24"></div>
+            <img src="/images/bg_element_chleb.png" loading="lazy" width="195" height="168" class="absolute top-0 left-20"/>
+            <img src="/images/bg_element_ziarno.png" loading="lazy" width="158" height="197" class="absolute bottom-0 right-50"/>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 grid-rows-1 bg-odwiedz_bg py-40 px-8 lg:px-32 gap-20">
+        <div class="">
+            <div class="sticky top-48 z-10">
+                <div class="font-barlow text-3xl font-normal text-primary">
+                    CZĘŚĆ&nbsp;02
+                </div>
+                <div class="h-2"></div>
+                <img src="/images/line_primary.png" loading="lazy"/>
+                <div class="h-9"></div>
+                <div class="font-platypi text-5xl font-light text-primary">
+                    Młyn
+                </div>
+            </div>
+            <div class="relative grid grid-cols-2 grid-rows-1 gap-10 pt-[50vh] z-5">
+                <div class="flex flex-col gap-10">
+                    <div class="h-133 mt-[50vh]">
+                        <img src="/images/img_tmp_home.jpg" loading="lazy" class="object-cover rounded-lg w-full h-full"/>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-10">
+                    <div class="h-100 ">
+                        <img src="/images/img_tmp_home.jpg" loading="lazy" class="object-cover rounded-lg  w-full h-full"/>
+                    </div>
+                    <div class="h-100 mt-[50vh]">
+                        <img src="/images/img_tmp_home.jpg" loading="lazy" class="object-cover rounded-lg  w-full h-full"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div class="flex flex-col gap-10 font-barlow text-primary sticky top-48">
+                <div class="text-8xl font-normal">
+                    ROK <b class="font-bold">1935</b>
+                </div>
+                <div class="flex flex-col font-corbel text-lg font-normal leading-[120%] w-[65%]">
+                    Przez dekady Nasz Młyn ewoluował, odpowiadając na potrzeby kolejnych pokoleń. Z małej, lokalnej działalności rozwinęliśmy się w nowoczesne przedsiębiorstwo, które wciąż opiera się na tych samych wartościach: tradycji, jakości i szacunku do środowiska.
+                    <br/>
+                    <br/>
+                    Przez dekady Nasz Młyn ewoluował, odpowiadając na potrzeby kolejnych pokoleń. Z małej, lokalnej działalności rozwinęliśmy się w nowoczesne przedsiębiorstwo, które wciąż opiera się na tych samych wartościach: tradycji, jakości i szacunku do środowiska.
+                    <div class="h-40"></div>
+                    <img src="/images/bg_element_bread_good.png" loading="lazy" width="240" height="152" class="self-center"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>
+

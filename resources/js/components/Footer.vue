@@ -10,12 +10,12 @@ import { Image } from 'primevue';
             <div class="w-full h-full row-1 col-1" style="background-image: url('/images/footer_bg_top.png');"></div>
             <div class="bg-linear-to-b from-primary from-0% to-transparent to-100% row-1 col-1 absolute inset-0"></div>
             <div class="bg-linear-to-t from-primary from-0% to-transparent to-100% row-1 col-1 absolute inset-0"></div>
-            <div class="py-32 px-[10%] lg:px-[25%] row-1 col-1 text-center relative flex flex-col gap-4 lg:gap-10">
+            <div class="py-20 px-[10%] lg:px-[25%] row-1 col-1 text-center relative flex flex-col gap-4 lg:gap-10">
                 <div class="text-background text-2xl lg:text-5xl">
                     Profesjonalna oferta<br>
                     dla przemysłu spożywczego
                 </div>
-                <div>
+                <div class="m-auto lg:w-[60%]">
                     Od lat współpracujemy z zakładami przetwórstwa spożywczego, takimi jak: piekarnie, cukiernie, makaroniarnie, firmy z branży HoReCa oraz z największymi zakładami przetwórstwa paszowego.
                 </div>
             </div>
@@ -49,8 +49,8 @@ import { Image } from 'primevue';
                 </div>
             </div>
 
-            <div class="border-t border-background pt-16 grid grid-cols-1 grid-rows-auto lg:grid-cols-3 lg:grid-rows-1 lg:h-84 gap-2">
-                <div class="flex flex-col justify-between items-center lg:items-start ">
+            <div class="border-t border-background pt-16 grid grid-cols-1 grid-rows-auto lg:grid-cols-3 lg:grid-rows-1 lg:h-84 gap-4">
+                <div class="flex flex-col justify-between items-center lg:items-start gap-4">
                     <Image src="/images/logo_text_white.svg" alt="Image" width="130"/>
                     <div class="flex flex-col font-corbel text-lg text-background leading-normal text-center lg:text-left">
                         <a>MŁYN ŁASZKIEWICZ SP. Z O.O.<br/>
@@ -64,7 +64,7 @@ import { Image } from 'primevue';
                     <div class="h-5"></div>
                     <a href="tel:+48 438 215 021">+48  43  821  50  21</a>
                     <a href="mailto:mlynszadek@mlynszadek.pl">mlynszadek@mlynszadek.pl</a>
-                    <div class="h-10"></div>
+                    <div class="h-5 lg:h-10"></div>
                     <div class="flex flex-col lg:flex-row gap-2 lg:gap-8 items-center align-middle justify-center">
                         <Link :class="'text-nowrap text-background font-corbel text-lg'">POLITYKA PRYWATNOŚCI</Link>
                         <Link :class="'text-nowrap text-background font-corbel text-lg'">POLITYKA COOKIES</Link>
@@ -76,8 +76,7 @@ import { Image } from 'primevue';
                     >
                         <span class="font-corbel text-background text-base tracking-widest">WRÓĆ DO GÓRY</span>
                     </Button_1>
-
-                    <div class="flex flex-wrap gap-2 lg:flex-col text-background font-corbel text-lg items-center lg:items-end">
+                    <div class="flex flex-col lg:flex-wrap gap-2 lg:flex-col text-background font-corbel text-lg items-center lg:items-end">
                         <a href="">INSTAGRAM</a>
                         <a href="">FACEBOOK</a>
                     </div>

@@ -73,6 +73,14 @@
 }
 
 @font-face {
+  font-family: Corbel;
+  src: url('/fonts/corbel-light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: Corbelz;
   src: url('/fonts/corbelz.ttf') format("truetype");
   font-weight: 400;
@@ -135,6 +143,15 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Corbel';
+  src: url('/fonts/corbel-light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Corbelz';
   src: url('/fonts/corbelz.ttf') format('truetype');
@@ -405,6 +422,7 @@
     --color-tlo_produkty: #F2E7CD;
     --color-contact: #BF9677;
     --color-form_bg: #644D3C;
+    --color-odwiedz_bg: #EBDFC5;
 
     --font-platypi: 'Platypi Variablefont Wght', ui-sans-serif, system-ui, sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',

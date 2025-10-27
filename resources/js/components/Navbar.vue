@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { Link, router } from "@inertiajs/vue3";
-import Image from 'primevue/image';
 import Select from 'primevue/select';
 
 const languages = [
@@ -18,16 +17,17 @@ const selectedMenuItem = ref({});
 </script>
 
 <template>
-    <div class="card text-white flex flex-row justify-between align-middle items-center px-8 py-8 lg:px-32 fixed w-full z-50">
-        <div class="hidden md:flex flex-row gap-12 align-middle items-center">
+    <div class="card text-white flex flex-row justify-between align-middle items-center py-8 px-8 lg:px-32 fixed w-full z-50">
+        <div class="hidden md:flex flex-row gap-12 align-middle items-center lg:w-[33%]">
             <Link :class="'text-nowrap text-primary'">ODWIEDŹ MŁYN</Link>
             <Link :class="'text-nowrap'">NASZE MĄKI</Link>
         </div>
-        <Link href="/" class="min-w-[100px]">
-            <Image src="/images/logo_white.svg" alt="Image" width="130" class="min-w-[100px]"/>
+
+        <Link href="/" class="min-w-[100px] m-auto lg:w-[33%]">
+            <img src="/images/logo_white.svg" alt="Image" width="130" class="m-auto min-w-[100px]"/>
         </Link>
 
-        <div class="hidden md:flex flex-row gap-12 align-middle items-center">
+        <div class="hidden md:flex flex-row-reverse gap-12 align-middle items-center lg:w-[33%]">
             <Select
                 :options="menuItems"
                 placeholder="Menu"

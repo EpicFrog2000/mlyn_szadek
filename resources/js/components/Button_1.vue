@@ -19,11 +19,11 @@ const props = defineProps({
 
 const getClass = (type: string) => {
 	switch (type) {
-		case 'primary': return 'bg-primary text-background py-3'
-        case 'background': return 'bg-background text-primary py-3'
+		case 'primary': return 'bg-primary text-background py-4'
+        case 'background': return 'bg-background text-primary py-4'
         case 'thin_background': return 'bg-background text-primary py-1'
-		case 'primary_border': return 'bg-primary text-background border-1 py-3'
-		default: return 'bg-primary text-background py-3'
+		case 'primary_border': return 'bg-primary text-background border-1 py-4'
+		default: return 'bg-primary text-background py-4'
 	}
 }
 </script>
