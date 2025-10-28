@@ -16,7 +16,7 @@ onMounted(() => document.body.className = 'bg-background')
 
     <div class="h-24"></div>
 
-    <div class="flex flex-col items-center justify-center gap-15 m-auto w-[80%]">
+    <div class="flex flex-col items-center justify-center gap-7 lg:gap-15 m-auto px-8 lg:w-[80%]">
         <img src="/images/szadkowska_title_home.svg" loading="lazy" width="340" height="140"/>
         <span class="font-platypi font-thin text-primary text-2xl lg:text-5xl text-center leading-normal">
             Historia Naszego Młyna sięga 1921 roku, kiedy to pierwsze ziarna zostały zmielone w rodzinnym młynie, zbudowanym z pasji do rzemiosła i szacunku do pracy z ziemią.
@@ -33,8 +33,8 @@ onMounted(() => document.body.className = 'bg-background')
 
     <div class="lg:grid grid-cols-1 grid-rows-1">
         <div class="row-1 col-1 relative z-10">
-            <div class="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-1 px-8 lg:px-32 gap-10">
-                <div class="flex flex-col gap-10 items-center text-center">
+            <div class="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-1 px-8 lg:px-32 gap-5 lg:gap-10">
+                <div class="flex flex-col gap-5 lg:gap-10 items-center text-center">
                     <span class="text-primary text-3xl leading-normal font-bold">
                         Tradycja
                     </span>
@@ -45,10 +45,10 @@ onMounted(() => document.body.className = 'bg-background')
                         Bo prawdziwy smak ma ten chleb, który dzieli się z bliskimi. Dlatego wierzymy, że nasze produkty są częścią domowej historii – tej, która przekazywana jest z pokolenia na pokolenie, z miłością, zaufaniem i troską.
                     </span>
                 </div>
-                <div class="flex flex-col gap-10 items-center text-center">
+                <div class="flex flex-col items-center text-center">
                     <img src="/images/maka_przenna_szadkowska_do_domu.png" width="345" loading="lazy"/>
                 </div>
-                <div class="flex flex-col gap-10 items-center text-center">
+                <div class="flex flex-col gap-5 lg:gap-10 items-center text-center">
                     <span class="text-primary text-3xl leading-normal font-bold">
                         Jakość
                     </span>
@@ -62,7 +62,7 @@ onMounted(() => document.body.className = 'bg-background')
                 <div class="lg:h-24"></div>
             </div>
 
-            <div class="flex flex-col relative z-10 items-center text-center lg:w-[40%] mx-auto gap-10 pt-5 px-8 lg:px-32">
+            <div class="flex flex-col relative z-10 items-center text-center lg:w-[40%] mx-auto gap-5 lg:gap-10 pt-5 px-8 lg:px-32">
                 <div class="h-px bg-primary w-[70%]"></div>
                 <div class="flex flex-row items-center">
                     <img src="/images/maka_small_spoon.svg" loading="lazy" width="110" class="hidden lg:block lg:absolute left-0"/>
@@ -86,7 +86,7 @@ onMounted(() => document.body.className = 'bg-background')
 
 
     <div class="flex flex-col items-center justify-center m-auto lg:w-[80%] px-8 lg:px-32">
-        <div class="flex flex-col justify-center items-center align-middle gap-15">
+        <div class="flex flex-col justify-center items-center align-middle gap-5 lg:gap-15">
             <div class="flex flex-col justify-center items-center align-middle">
                 <span class="font-corbel text-lg font-bold leading-normal text-primary text-center">
                     WYCIECZKA<br/>
@@ -104,14 +104,14 @@ onMounted(() => document.body.className = 'bg-background')
             </Button_1>
         </div>
         <div class="h-15"></div>
-        <div class="flex flex-col lg:flex-row gap-12 items-center">
-            <div class="overflow-clip h-full lg:h-128" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000' }">
+        <div class="flex flex-col lg:flex-row gap-5 lg:gap-12 items-center">
+            <div class="overflow-clip h-128" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000' }">
                 <img src="/images/img_tmp_home1.jpg" loading="lazy" class="object-cover h-full rounded-lg"/>
             </div>
-            <div class="overflow-clip h-full lg:h-182" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000' }">
+            <div class="overflow-clip h-182" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000' }">
                 <img src="/images/img_tmp_home.jpg" loading="lazy" class="object-cover h-full rounded-lg"/>
             </div>
-            <div class="overflow-clip h-full lg:h-128" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000' }">
+            <div class="overflow-clip h-128" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000' }">
                 <img src="/images/img_tmp_home2.jpg" loading="lazy" class="object-cover h-full rounded-lg"/>
             </div>
         </div>
@@ -131,7 +131,7 @@ onMounted(() => document.body.className = 'bg-background')
             <span class="font-platypi font-thin text-primary text-2xl lg:text-5xl text-center leading-normal m-auto lg:w-[80%]">
                 Nasza oferta skierowana jest zarówno do sektora detalicznego, jak i odbiorców przemysłowych.
             </span>
-            <div class="h-10"></div>
+            <div class="h-5 lg:h-10"></div>
             <span class="text-primary text-center leading-6 font-normal text-lg m-auto lg:w-[35%]">
                 Proponujemy Państwu szeroki wybór mąk pszennych i żytnich w różnych typach i gramaturach, dostępnych w opakowaniach konsumenckich, gastronomicznych oraz przemysłowych.
             </span>
