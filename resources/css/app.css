@@ -1,4 +1,5 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@import "tailwindcss-primeui";
 
 @import 'tw-animate-css';
 
@@ -8,8 +9,7 @@
 @custom-variant dark (&:is(.dark *));
 
 
-@import "tailwindcss";
-@import "tailwindcss-primeui";
+
 
 @font-face {
   font-family: Corbel;

@@ -10,9 +10,22 @@ Route::get('/', function () {
     return Inertia::render('Home');
 })->name('home');
 
-Route::get('/OdwiedzMlyn', function () {
+Route::get('/odwiedz-mlyn', function () {
     return Inertia::render('OdwiedzMlyn');
 })->name('OdwiedzMlyn');
+
+Route::get('/nasze-maki', function () {
+    return Inertia::render('NaszeMaki');
+})->name('NaszeMaki');
+
+Route::get('/nasze-maki-b2b', function () {
+    return Inertia::render('MakiB2B');
+})->name('MakiB2B');
+
+
+Route::get('/maka-detale', function () {
+    return Inertia::render('MakaDetailsCard');
+})->name('MakaDetailsCard');
 
 Route::get('/kontakt', function () {
     return Inertia::render('Contact');

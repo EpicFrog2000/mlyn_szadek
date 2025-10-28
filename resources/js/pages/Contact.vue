@@ -11,15 +11,15 @@ onMounted(() => document.body.className = 'bg-primary')
 <template>
     <div class="h-64"></div>
     <div class="flex flex-col gap-6 lg:gap-11 text-center text-background px-8 lg:px-[20%] leading-normal font-platypi font-light h-auto">
-        <span class="text-4xl lg:text-7xl">
+        <span class="text-4xl lg:text-7xl" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }">
             Kontakt do nas
         </span>
-        <span class="text-2xl lg:text-5xl">
+        <span class="text-2xl lg:text-5xl" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }">
             W celu uzyskania informacji dotyczących naszych produktów lub usług dla branży przemysłowych, skontaktuj się z nami bezpośrednio lub napisz do nas za pomocą formularza poniżej.
         </span>
     </div>
     <div class="h-48"></div>
-    <div class="grid grid-cols-1 grid-rows-1">
+    <div class="grid grid-cols-1 grid-rows-1" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }">
         <div class="hidden lg:flex col-1 row-1 m-auto h-full w-[82%]">
             <img src="/images/bg_element_contant_2.svg"  loading="lazy" class="ml-0 mt-auto"/>
             <img src="/images/bg_element_contant_1.svg" loading="lazy" class="ml-auto mb-auto"/>
