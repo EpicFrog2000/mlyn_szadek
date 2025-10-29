@@ -4,13 +4,6 @@ import Button_1 from '../components/Button_1.vue'
 import MakaCard from '../components/MakaCard.vue';
 onMounted(() => document.body.className = 'bg-background')
 
-
-import DataTable from 'primevue/datatable';
-import Column from 'primevue/column';
-import ColumnGroup from 'primevue/columngroup';   // optional
-import Row from 'primevue/row';                   // optional
-
-
 const products = [
     {
         category: 'MĄKI PODSTAWOWE',
@@ -90,14 +83,14 @@ const products = [
 
     <div class="h-64"></div>
     <div class="px-8 lg:px-32">
-        <div class="h-px bg-primary" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }"></div>
+        <div class="h-px bg-primary" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"></div>
     </div>
 
-    <div class="px-8 lg:px-32 py-12 lg:py-24 flex flex-col lg:flex-row gap-20">
-        <div class="bg-tlo_produkty overflow-clip rounded-lg w-fit min-w-96 max-w-128 lg:px-14 lg:py-14">
-            <img src="/images/maka_przenna_szadkowska_do_domu.png" width="345" loading="lazy" class="object-cover hover:scale-115 transition duration-700 ease-in-out w-full h-full"/>
+    <div class="px-8 lg:px-32 py-12 lg:py-24 flex flex-col lg:flex-row gap-20 justify-items-start items-center">
+        <div class="bg-tlo_produkty overflow-clip rounded-lg w-fit max-w-lg p-2 lg:px-[5%] lg:py-[2%]" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
+            <img src="/images/maka_przenna_szadkowska_do_domu.png" width="345" loading="lazy" class="object-cover hover:scale-115 transition duration-700 ease-in-out w-full h-auto"/>
         </div>
-        <div class="m-auto max-w-164">
+        <div class="m-auto max-w-164" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
             <div class="flex flex-row font-barlow text-lg text-primary">
                 TYP&nbsp;<b>480</b>
             </div>
@@ -109,8 +102,8 @@ const products = [
             </div>
             <div class="h-12"></div>
 
-            <div class="overflow-x-auto w-full">
-                 <table class="w-[-webkit-fill-available]"> <!-- TODO ZMIEN NA LEPSZE ten webkit -->
+            <div class="overflow-x-auto w-full max-w-[calc(100vw-4rem)] scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-black">
+                 <table class="w-full">
                     <thead>
                         <tr>
                             <th class="px-8 align-top pb-5"></th>
@@ -157,8 +150,39 @@ const products = [
                     <tbody></tbody>
                     <tbody class="border-t-2 border-primary text-primary">
                         <tr class="border-b border-primary">
-                            <td class="py-3">
-                                test
+                            <td class="py-3 font-corbel text-lg font-bold leading-normal">
+                                WAGA
+                            </td>
+                            <td class="py-3 text-center font-barlow text-2xl font-normal leading-normal">
+                                1kg
+                            </td>
+                            <td class="py-3 text-center font-barlow text-2xl font-normal leading-normal">
+                                10kg
+                            </td>
+                            <td class="py-3 text-center font-barlow text-2xl font-normal leading-normal">
+                                800kg
+                            </td>
+                        </tr>
+                        <tr class="border-b border-primary">
+                            <td class="py-3 font-corbel text-lg font-bold leading-normal">
+                                ILOŚĆ&nbsp;SZT.
+                            </td>
+                            <td class="py-3 text-center font-barlow text-2xl font-normal leading-normal">
+                                1
+                            </td>
+                            <td class="py-3 text-center font-barlow text-2xl font-normal leading-normal">
+                                10
+                            </td>
+                            <td class="py-3 text-center font-barlow text-2xl font-normal leading-normal">
+                                800/80 zgrzewki
+                            </td>
+                        </tr>
+                        <tr class="border-b border-primary">
+                            <td class="py-3 font-corbel text-lg font-bold leading-normal">
+                                KOD&nbsp;EAN
+                            </td>
+                            <td class="py-3 text-center font-barlow text-2xl font-normal leading-normal">
+                                5908215500085
                             </td>
                         </tr>
                     </tbody>
@@ -181,12 +205,12 @@ const products = [
     </div>
 
 
-    <div v-for="kategoria in products" :key="kategoria.name">
+    <div v-for="kategoria in products" :key="kategoria.category">
         <div class="px-8 lg:px-32">
-            <div class="h-px bg-primary" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }"></div>
+            <div class="h-px bg-primary" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"></div>
         </div>
         <div class="h-24"></div>
-        <div class="flex flex-col justify-center items-center align-middle" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }">
+        <div class="flex flex-col justify-center items-center align-middle" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
             <span class="font-corbel text-lg font-bold leading-normal text-primary text-center">
                 {{ kategoria.category }}<br/>
             </span>
@@ -200,7 +224,7 @@ const products = [
                 :subtitle="product.subtitle"
                 :imagePath="product.imagePath"
                 :description="product.description"
-                v-animateonscroll="{ enterClass: `animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000 delay-${index*200}` }"
+                v-animateonscroll="{ enterClass: `animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000 delay-${index*200}`, animateOnce: true }"
             />
         </div>
         <div class="h-24"></div>

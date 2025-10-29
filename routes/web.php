@@ -10,9 +10,9 @@ Route::get('/', function () {
     return Inertia::render('Home');
 })->name('home');
 
-Route::get('/odwiedz-mlyn', function () {
-    return Inertia::render('OdwiedzMlyn');
-})->name('OdwiedzMlyn');
+Route::get('/historia-mlyna', function () {
+    return Inertia::render('HistoriaMlyna');
+})->name('HistoriaMlyna');
 
 Route::get('/nasze-maki', function () {
     return Inertia::render('NaszeMaki');

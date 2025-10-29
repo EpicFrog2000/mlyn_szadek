@@ -68,27 +68,29 @@ const products =
 
 
 
+
+
 </script>
 
 <template>
     <div class="h-64"></div>
     <div class="flex flex-col gap-5 lg:gap-10 px-8 lg:px-32">
-        <div class="text-2xl lg:text-5xl leading-normal font-light text-primary font-platypi text-center" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }">
+        <div class="text-2xl lg:text-5xl leading-normal font-light text-primary font-platypi text-center" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
             Oferta skierowana do sektora detalicznego.
         </div>
-        <div class="text-lg font-corbel font-normal text-primary text-center m-auto leading-6" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }">
+        <div class="text-lg font-corbel font-normal text-primary text-center m-auto leading-6" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
             W ofercie dla klienta indywidualnego,<br/>
             posiadamy mąki podstawowe oraz wielofunkcyjne
         </div>
     </div>
     <div class="h-24" ></div>
 
-    <div v-for="kategoria in products" :key="kategoria.name">
+    <div v-for="kategoria in products" :key="kategoria.category">
         <div class="px-8 lg:px-32">
-            <div class="h-px bg-primary" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }"></div>
+            <div class="h-px bg-primary" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"></div>
         </div>
         <div class="h-24"></div>
-        <div class="flex flex-col justify-center items-center align-middle" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }">
+        <div class="flex flex-col justify-center items-center align-middle" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
             <span class="font-corbel text-lg font-bold leading-normal text-primary text-center">
                 {{ kategoria.category }}<br/>
             </span>
@@ -96,16 +98,15 @@ const products =
         </div>
         <div class="h-24"></div>
         <div class="flex flex-wrap gap-14 px-8 lg:px-32 content-center">
-            <MakaCard v-for="(product, index) in kategoria.products" :key="product.name"
+            <MakaCard v-for="(product, index) in kategoria.products" :key="product.type"
                 :type="product.type"
                 :title="product.title"
                 :subtitle="product.subtitle"
                 :imagePath="product.imagePath"
                 :description="product.description"
-                v-animateonscroll="{ enterClass: `animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000 delay-${index*200}` }"
+                v-animateonscroll="{ enterClass: `animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000 delay-${index*200}`, animateOnce: true }"
             />
         </div>
         <div class="h-24"></div>
     </div>
-
 </template>

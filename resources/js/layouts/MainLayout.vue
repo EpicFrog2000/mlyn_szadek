@@ -2,20 +2,6 @@
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 import { Transition } from 'vue';
-import Lenis from 'lenis';
-import { onMounted } from 'vue';
-
-onMounted(()=>{
-    const lenis = new Lenis();
-
-    // Use requestAnimationFrame to continuously update the scroll
-    function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-})
 </script>
 
 <template>

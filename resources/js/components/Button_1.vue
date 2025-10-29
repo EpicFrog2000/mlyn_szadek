@@ -20,6 +20,7 @@ const props = defineProps({
 const getClass = (type: string) => {
 	switch (type) {
 		case 'primary': return 'bg-primary text-background py-4'
+        case 'thin_primary': return 'bg-primary text-background py-1 !px-4'
         case 'background': return 'bg-background text-primary py-4'
         case 'thin_background': return 'bg-background text-primary py-1'
 		case 'primary_border': return 'bg-primary text-background border-1 py-4'
@@ -29,8 +30,8 @@ const getClass = (type: string) => {
 </script>
 
 <template>
-	<component
-		:is="'button'"
+    <component
+        :is="props.href ? Link : 'button'"
 		:href="props.href"
 		@click="props.onClick"
 		:disabled="props.disabled"

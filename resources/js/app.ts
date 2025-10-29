@@ -4,7 +4,8 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import type { DefineComponent } from 'vue';
 import { createApp, h } from 'vue';
-
+import { createPinia } from 'pinia'
+const pinia = createPinia()
 import MainLayout from './layouts/MainLayout.vue';
 
 import PrimeVue from 'primevue/config';
@@ -19,7 +20,7 @@ createInertiaApp({
         const pages = import.meta.glob('./pages/**/*.vue')
         const importer = pages[`./pages/${name}.vue`]
         if (!importer) throw new Error(`Page not found: ${name}`)
-        return importer().then(module => {
+        return importer().then((module: { default: any; }) => {
             const comp = module.default || module
             comp.layout ||= MainLayout
             return comp
@@ -32,10 +33,11 @@ createInertiaApp({
                 theme: {
                     preset: Aura
                 },
-                ripple: true
+                ripple: true,
             })
             .directive('ripple', Ripple)
             .directive('animateonscroll', AnimateOnScroll)
+            .use(pinia)
             .mount(el);
     }
 });
