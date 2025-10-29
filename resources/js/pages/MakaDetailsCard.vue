@@ -109,9 +109,6 @@ const produkt = {
             </div>
             <div class="h-12"></div>
 
-
-
-
             <div class="overflow-x-auto w-full">
                  <table class="w-[-webkit-fill-available]"> <!-- TODO ZMIEN NA LEPSZE ten webkit -->
                     <thead>
