@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="js">
 import { onMounted } from 'vue'
 onMounted(() => document.body.className = 'bg-primary')
 import MakaCardB2B from '../components/MakaCardB2B.vue';

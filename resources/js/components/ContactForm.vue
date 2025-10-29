@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="js">
 import Select from 'primevue/select'
 import { ref } from 'vue'
 import Message from 'primevue/message'

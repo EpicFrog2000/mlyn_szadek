@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="js">
 import { onMounted } from 'vue'
 import MakaCard from '../components/MakaCard.vue';
 onMounted(() => document.body.className = 'bg-background')
@@ -83,7 +83,7 @@ const products =
     </div>
     <div class="h-24" ></div>
 
-    <div v-for="kategoria in products">
+    <div v-for="kategoria in products" :key="kategoria.name">
         <div class="px-8 lg:px-32">
             <div class="h-px bg-primary" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }"></div>
         </div>
@@ -96,7 +96,7 @@ const products =
         </div>
         <div class="h-24"></div>
         <div class="flex flex-wrap gap-14 px-8 lg:px-32 content-center">
-            <MakaCard v-for="(product, index) in kategoria.products"
+            <MakaCard v-for="(product, index) in kategoria.products" :key="product.name"
                 :type="product.type"
                 :title="product.title"
                 :subtitle="product.subtitle"

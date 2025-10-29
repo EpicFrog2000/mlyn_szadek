@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="js">
 import { ref, onMounted } from "vue";
 import { Link, router } from "@inertiajs/vue3";
 import Select from 'primevue/select';
@@ -13,7 +13,7 @@ const menuItems = [
     { name: 'ODWIEDŹ MŁYN', route: '/', menu: "Menu" },
     { name: 'NASZE MĄKI', route: '/', menu: "Menu" },
 ]
-const selectedMenuItem = ref({});
+
 </script>
 
 <template>
@@ -38,7 +38,7 @@ const selectedMenuItem = ref({});
                 <template #label>
                     Menu
                 </template>
-                <template #value="slotProps">
+                <template>
                     Menu
                 </template>
                 <template #dropdownicon>
@@ -63,7 +63,7 @@ const selectedMenuItem = ref({});
                 pt:label="focus-visible:outline-0"
                 unstyled
             >
-                <template #value="slotProps">
+                <template>
                     PL
                 </template>
                 <template #option="slotProps">
@@ -85,7 +85,7 @@ const selectedMenuItem = ref({});
                 <template #label>
                     Menu
                 </template>
-                <template #value="slotProps">
+                <template>
                     Menu
                 </template>
                 <template #dropdownicon>

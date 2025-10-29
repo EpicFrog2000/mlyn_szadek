@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="js">
 import { onMounted } from 'vue'
 import Button_1 from '../components/Button_1.vue'
 import MakaCard from '../components/MakaCard.vue';
@@ -73,15 +73,15 @@ const products = [
     },
 ];
 
-const produkt = {
-    waga_torebka: '1 kg',
-    waga_zgrzewka: '1 kg',
-    waga_paleta: '1 kg',
-    ilosc_torebka: '1',
-    ilosc_zgrzewka: '10',
-    ilosc_paleta: '10',
-    kod_ean: '5908215500085',
-}
+// const produkt = {
+//     waga_torebka: '1 kg',
+//     waga_zgrzewka: '1 kg',
+//     waga_paleta: '1 kg',
+//     ilosc_torebka: '1',
+//     ilosc_zgrzewka: '10',
+//     ilosc_paleta: '10',
+//     kod_ean: '5908215500085',
+// }
 
 
 </script>
@@ -184,7 +184,7 @@ const produkt = {
     </div>
 
 
-    <div v-for="kategoria in products">
+    <div v-for="kategoria in products" :key="kategoria.name">
         <div class="px-8 lg:px-32">
             <div class="h-px bg-primary" v-animateonscroll="{ enterClass: 'animate-enter animate-once fade-in-0 slide-in-from-b-20 animate-duration-1000' }"></div>
         </div>
@@ -197,7 +197,7 @@ const produkt = {
         </div>
         <div class="h-24"></div>
         <div class="flex flex-wrap gap-14 px-8 lg:px-32 content-center">
-            <MakaCard v-for="(product, index) in kategoria.products"
+            <MakaCard v-for="(product, index) in kategoria.products" :key="product.title"
                 :type="product.type"
                 :title="product.title"
                 :subtitle="product.subtitle"
