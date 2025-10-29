@@ -1,4 +1,4 @@
-<script setup lang="js">
+<script setup lang="ts">
 import { onMounted } from 'vue'
 import Button_1 from '../components/Button_1.vue'
 import MakaCard from '../components/MakaCard.vue';

@@ -1,4 +1,4 @@
-<script setup lang="js">
+<script setup lang="ts">
 import Select from 'primevue/select'
 import { ref } from 'vue'
 import Message from 'primevue/message'
@@ -8,10 +8,10 @@ const inquiryTypes = [
 	{ name: 'test', value: 'test' },
 	{ name: 'test2', value: 'test2' }
 ]
+
 const selectedInquiryType = ref(null)
 
 const checkedZgoda = ref(false);
-
 
 const disabledSendBtn = ref(false);
 
@@ -42,8 +42,6 @@ async function submitContanctForm() {
 		disabledSendBtn.value = false
 	}
 }
-
-
 </script>
 
 <template>

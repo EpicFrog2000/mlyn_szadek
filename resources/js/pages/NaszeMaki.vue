@@ -1,4 +1,4 @@
-<script setup lang="js">
+<script setup lang="ts">
 import { onMounted } from 'vue'
 import MakaCard from '../components/MakaCard.vue';
 onMounted(() => document.body.className = 'bg-background')

@@ -1,4 +1,4 @@
-<script setup lang="js">
+<script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { Link, router } from "@inertiajs/vue3";
 import Select from 'primevue/select';
