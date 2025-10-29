@@ -6,7 +6,6 @@ import { onMounted } from 'vue'
 
 onMounted(() => document.body.className = 'bg-background')
 
-
 </script>
 
 <template>

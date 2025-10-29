@@ -5,7 +5,6 @@ import ScrollWidget from '../components/ScrollWidget.vue';
 import { onMounted } from 'vue'
 
 onMounted(() => document.body.className = 'bg-primary')
-
 </script>
 
 <template>

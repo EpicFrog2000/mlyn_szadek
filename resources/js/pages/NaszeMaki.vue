@@ -104,7 +104,7 @@ const products =
                 :subtitle="product.subtitle"
                 :imagePath="product.imagePath"
                 :description="product.description"
-                v-animateonscroll="{ enterClass: `animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000 delay-${index*200}`, animateOnce: true }"
+                v-animateonscroll="{ enterClass: `animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000`, animateOnce: true, threshold: 0 }"
             />
         </div>
         <div class="h-24"></div>

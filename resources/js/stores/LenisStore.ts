@@ -3,11 +3,14 @@ import { ref } from 'vue'
 import Lenis from 'lenis'
 
 export const useLenis = defineStore('lenis', () => {
-	let lenis: Lenis | null = null
+	let lenis: Lenis
 	const scrollPercent = ref(0)
 
 	function init(callback: (scroll: number, percent: number) => void) {
-		lenis = new Lenis()
+		lenis = new Lenis({
+			
+			lerp: 0.07,
+		})
 		function raf(time: number) {
 			lenis!.raf(time)
 			requestAnimationFrame(raf)
@@ -20,5 +23,17 @@ export const useLenis = defineStore('lenis', () => {
 		})
 	}
 
-	return { init, scrollPercent }
+	function scrollTo(value:number) {
+		lenis.scrollTo(value)
+	}
+
+	function getLenisLimit(){
+		return lenis.limit
+	}
+
+	function getLenis(){
+		return lenis
+	}
+
+	return { init, scrollPercent, scrollTo, getLenisLimit, getLenis }
 })

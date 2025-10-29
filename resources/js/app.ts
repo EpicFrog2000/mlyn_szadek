@@ -14,6 +14,8 @@ import Aura from '@primeuix/themes/aura';
 import Ripple from 'primevue/ripple';
 import AnimateOnScroll from 'primevue/animateonscroll';
 
+
+
 createInertiaApp({
     title: (title) => title,
     resolve: name => {
