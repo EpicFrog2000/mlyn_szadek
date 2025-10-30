@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm.vue';
 
 import { onMounted } from 'vue'
 
-onMounted(() => document.body.className = 'bg-primary')
+onMounted(() => {document.body.className = 'bg-primary'; window.scrollTo(0,0)})
 
 </script>
 

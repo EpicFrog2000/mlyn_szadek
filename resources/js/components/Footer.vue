@@ -6,7 +6,7 @@ import { Image } from 'primevue';
 import { usePage } from '@inertiajs/vue3'
 import { computed } from 'vue'
 
-const pages = ['/maki-b2b', '/kontakt']
+const pages = ['/maki-b2b', '/kontakt', '/historia-mlyna']
 const page = usePage()
 const hide_top_part = computed(() => pages.includes(page.url))
 
@@ -65,7 +65,7 @@ function scrollToTop() {
                 </div>
             </div>
 
-            <div class="border-t border-background pt-16 grid grid-cols-1 grid-rows-auto lg:grid-cols-3 lg:grid-rows-1 lg:h-84 gap-4">
+            <div class="border-t border-[#FEF2D720] pt-16 grid grid-cols-1 grid-rows-auto lg:grid-cols-3 lg:grid-rows-1 lg:h-84 gap-4">
                 <div class="flex flex-col justify-between items-center lg:items-start gap-4">
                     <Image src="/images/logo_text_white.svg" alt="Image" width="130" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"/>
                     <div class="flex flex-col font-corbel text-lg text-background leading-normal text-center lg:text-left" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">

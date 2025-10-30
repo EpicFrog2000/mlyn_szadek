@@ -1,8 +1,6 @@
 import '../css/app.css';
 
 import { createInertiaApp } from '@inertiajs/vue3';
-import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
-import type { DefineComponent } from 'vue';
 import { createApp, h } from 'vue';
 import { createPinia } from 'pinia'
 const pinia = createPinia()
@@ -13,8 +11,6 @@ import 'primeicons/primeicons.css'
 import Aura from '@primeuix/themes/aura';
 import Ripple from 'primevue/ripple';
 import AnimateOnScroll from 'primevue/animateonscroll';
-
-
 
 createInertiaApp({
     title: (title) => title,

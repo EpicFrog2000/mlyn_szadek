@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import MakaCard from '../components/MakaCard.vue';
-onMounted(() => document.body.className = 'bg-background')
+onMounted(() => {
+    document.body.className = 'bg-background'
+    window.scrollTo(0,0)
+})
 
 const products =
 [

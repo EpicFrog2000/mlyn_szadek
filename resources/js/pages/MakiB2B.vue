@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-onMounted(() => document.body.className = 'bg-primary')
+onMounted(() => {document.body.className = 'bg-primary'; window.scrollTo(0,0)})
 
 import MakaCardB2B from '../components/MakaCardB2B.vue';
 import Button_1 from '../components/Button_1.vue';

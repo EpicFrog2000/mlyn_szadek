@@ -2,7 +2,7 @@
 import { onMounted } from 'vue'
 import Button_1 from '../components/Button_1.vue'
 import MakaCard from '../components/MakaCard.vue';
-onMounted(() => document.body.className = 'bg-background')
+onMounted(() => {document.body.className = 'bg-background'; window.scrollTo(0,0)})
 
 const products = [
     {
@@ -218,13 +218,13 @@ const products = [
         </div>
         <div class="h-24"></div>
         <div class="flex flex-wrap gap-14 px-8 lg:px-32 content-center">
-            <MakaCard v-for="(product, index) in kategoria.products" :key="product.title"
+            <MakaCard v-for="(product) in kategoria.products" :key="product.title"
                 :type="product.type"
                 :title="product.title"
                 :subtitle="product.subtitle"
                 :imagePath="product.imagePath"
                 :description="product.description"
-                v-animateonscroll="{ enterClass: `animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000 delay-${index*200}`, animateOnce: true }"
+                v-animateonscroll="{ enterClass: `animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000`, animateOnce: true }"
             />
         </div>
         <div class="h-24"></div>

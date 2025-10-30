@@ -4,7 +4,7 @@ import Button_1 from '../components/Button_1.vue';
 
 import { onMounted } from 'vue'
 
-onMounted(() => document.body.className = 'bg-background')
+onMounted(() => {document.body.className = 'bg-background'; window.scrollTo(0,0)})
 
 </script>
 
