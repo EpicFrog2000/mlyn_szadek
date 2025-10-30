@@ -15,18 +15,19 @@ const checkedZgoda = ref(false);
 
 const disabledSendBtn = ref(false);
 
-const error = ref(null);
+const error = ref('');
 
 async function submitContanctForm() {
 	disabledSendBtn.value = true
-	error.value = null
-	const form = document.getElementById('contactForm')
+	error.value = ''
+	const form = document.getElementById('contactForm') as HTMLFormElement;
+    if(!form) return;
 	const data = new FormData(form)
 	try {
-        const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        const token = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content')
 		const r = await fetch('/api/sendContactMail', {
 			method: 'POST',
-            headers: { 'X-CSRF-TOKEN': token },
+            headers: new Headers({ 'X-CSRF-TOKEN': token } as HeadersInit),
 			body: data
 		})
         const response = await r.json()
@@ -36,8 +37,8 @@ async function submitContanctForm() {
         }else{
             throw new Error(response.message || 'Błąd')
         }
-	} catch (e) {
-		error.value = e.message
+    } catch (e: unknown) {
+        error.value = e instanceof Error ? e.message : ''
 	} finally {
 		disabledSendBtn.value = false
 	}

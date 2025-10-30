@@ -6,7 +6,6 @@ import Button_1 from '../components/Button_1.vue'
 import logo_navbar from "./logo_navbar.vue";
 import { usePage } from '@inertiajs/vue3'
 import { computed } from 'vue'
-import Lenis from 'lenis';
 import { useLenis } from "../stores/LenisStore";
 const lenisStore = useLenis()
 
@@ -27,7 +26,7 @@ onMounted(() => {
 	let lastScroll = 0
 	let ticking = false
 
-	lenisStore.init((scroll, percent) => {
+	lenisStore.init((scroll:number) => {
 		if (!ticking) {
 			ticking = true
 			requestAnimationFrame(() => {
@@ -51,24 +50,24 @@ onMounted(() => {
                 <Link href="/historia-mlyna" :class="['text-nowrap transition-all duration-300 ease-in-out', typeWhite ? 'text-white' : 'text-primary']">HISTORIA MŁYNA</Link>
                 <Link href="/nasze-maki" :class="['text-nowrap transition-all duration-300 ease-in-out', typeWhite ? 'text-white' : 'text-primary']">NASZE MĄKI</Link>
             </div>
-            <Link href="/" class="min-w-[100px] m-auto lg:w-[33%] flex items-center justify-center">
-                <logo_navbar :fillColor="typeWhite ? 'white' : '#795D48'"></logo_navbar>
+            <Link href="/" class="min-w-[100px] md:m-auto lg:w-[33%] flex md:items-center md:justify-center">
+                <logo_navbar :fillColor="typeWhite ? 'white' : '#795D48'" class="h-20 mg:h-32 w-auto"></logo_navbar>
             </Link>
             <div class="hidden md:flex flex-row-reverse gap-12 align-middle items-center lg:w-[33%]">
-
                 <Select
                     v-model="selectedLanguage"
                     :options="languages"
                     optionLabel="name"
                     placeholder="Wybierz język"
                     @change="router.visit(selectedLanguage.route)"
-                    :class="['flex flex-row bg-transparent gap-1.5 cursor-pointer transition-all duration-300 ease-in-out relative', typeWhite ? 'text-white' : 'text-primary']"
+                    :class="['focus-visible:outline-0 flex flex-row bg-transparent gap-1.5 cursor-pointer transition-all duration-300 ease-in-out relative', typeWhite ? 'text-white' : 'text-primary']"
                     pt:dropdownicon="pt-1"
                     pt:label="focus-visible:outline-0"
-                    pt:overlay="!fixed !top-28"
+                    pt:overlay="!fixed !top-28 focus-visible:outline-0"
+                    pt:dropdown="focus-visible:outline-0"
                     unstyled
                 >
-                    <template>
+                    <template class="focus-visible:outline-0">
                         PL
                     </template>
                     <template #option="slotProps">
@@ -77,21 +76,21 @@ onMounted(() => {
                         </div>
                     </template>
                 </Select>
-
-
-
                 <Link href="/kontakt" :class="['text-nowrap transition-all duration-300 ease-in-out', typeWhite ? 'text-white' : 'text-primary']">KONTAKT</Link>
-                <Button_1
-                    type="thin_primary"
-                >
+                <Button_1 type="thin_primary">
                     <div class="flex flex-row gap-2 items-center text-secondary font-platypi text-lg font-medium leading-normal">
                         <i class="pi pi-bars" />
                         Menu
                     </div>
-
                 </Button_1>
             </div>
-            <div class="flex md:hidden flex-row gap-12 align-middle items-center">
+            <div class="flex md:hidden flex-row gap-6 md:gap-12 align-middle items-center">
+                <Button_1 type="thin_primary">
+                    <div class="flex flex-row gap-2 items-center text-secondary font-platypi text-lg font-medium leading-normal">
+                        <i class="pi pi-bars" />
+                        Menu
+                    </div>
+                </Button_1>
                 <Select
                     v-model="selectedLanguage"
                     :options="languages"

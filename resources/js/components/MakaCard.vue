@@ -1,11 +1,12 @@
 <script setup lang="ts">
-
+import { Link } from '@inertiajs/vue3';
 const props = defineProps({
 	type: String,
     title: String,
     subtitle: String,
     imagePath: String,
     description: String,
+    href: String
 })
 
 </script>
@@ -14,7 +15,7 @@ const props = defineProps({
 <template>
 
 
-<div class="bg-tlo_produkty overflow-clip grid grid-cols-1 grid-rows-1 rounded-lg w-fit">
+<Link :href="href" class="bg-tlo_produkty overflow-clip grid grid-cols-1 grid-rows-1 rounded-lg w-fit">
     <div class="w-full py-6 px-5 row-1 col-1 flex flex-row justify-between relative z-10 pointer-events-none">
         <div class="flex flex-row font-barlow text-sm text-primary">
             TYP&nbsp;<b>{{ type }}</b>
@@ -34,7 +35,7 @@ const props = defineProps({
             </div>
         </div>
     </div>
-</div>
+</Link>
 
 
 </template>

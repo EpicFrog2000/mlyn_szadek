@@ -93,6 +93,7 @@ import CursorHover from '../components/CursorHover.vue';
             imagePath="/images/worek_przemyslowy_450.png"
             v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"
             :class="'show-cursor cursor-none'"
+            href="/maka-detale"
         />
         <MakaCardB2B
             type="450"
@@ -100,6 +101,7 @@ import CursorHover from '../components/CursorHover.vue';
             imagePath="/images/worek_przemyslowy_450.png"
             v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"
             :class="'show-cursor cursor-none'"
+            href="/maka-detale"
         />
         <MakaCardB2B
             type="450"
@@ -107,6 +109,7 @@ import CursorHover from '../components/CursorHover.vue';
             imagePath="/images/worek_przemyslowy_450.png"
             v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"
             :class="'show-cursor cursor-none'"
+            href="/maka-detale"
         />
     </div>
 
@@ -152,6 +155,7 @@ import CursorHover from '../components/CursorHover.vue';
         <Button_1
             :type="'background'"
             v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"
+            href="/kontakt"
         >
             KONTAKT DO NAS
         </Button_1>

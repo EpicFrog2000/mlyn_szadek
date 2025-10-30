@@ -23,6 +23,7 @@ onMounted(() => document.body.className = 'bg-background')
         <Button_1
         type="primary"
         v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"
+        href="/historia-mlyna"
         >
             POZNAJ NASZĄ HISTORIĘ
         </Button_1>
@@ -101,6 +102,7 @@ onMounted(() => document.body.className = 'bg-background')
             <Button_1
                 type="primary"
                 v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"
+                href="/historia-mlyna"
             >
                 ODWIEDŹ MŁYN
             </Button_1>
@@ -161,6 +163,7 @@ onMounted(() => document.body.className = 'bg-background')
                 <Button_1
                 :type="'primary'"
                 v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000 delay-300', animateOnce: true }"
+                href="/nasze-maki"
                 >
                     <span class="font-corbel text-base tracking-widest">ZOBACZ OFERTĘ DETALICZNĄ</span>
                 </Button_1>
