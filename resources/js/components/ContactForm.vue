@@ -23,6 +23,11 @@ async function submitContanctForm() {
 	const form = document.getElementById('contactForm') as HTMLFormElement;
     if(!form) return;
 	const data = new FormData(form)
+
+    if(!checkedZgoda.value){
+        error.value = 'Nie zaznaczono zgody'
+        return
+    }
 	try {
         const token = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content')
 		const r = await fetch('/api/sendContactMail', {
@@ -72,7 +77,7 @@ async function submitContanctForm() {
     <div class="flex flex-wrap gap-10 justify-between">
         <div class="flex items-center gap-2">
             <label class="flex items-center gap-2 cursor-pointer text-background font-bold text-sm">
-                <input type="checkbox" v-model="checkedZgoda" name="zgoda" id="zgoda" required class="opacity-0 peer h-0 w-0" />
+                <input type="checkbox" v-model="checkedZgoda" name="zgoda" id="zgoda" class="opacity-0 peer h-0 w-0" />
                 <span class="w-6 h-6 max-h-6 max-w-6 min-h-6 min-w-6 rounded-full border-2 border-primary peer-checked:bg-primary transition-all"></span>
                 <span>ZAPOZNAŁEM SIĘ Z POLITYKA PRYWATNOŚCI UDOSTEPNIONĄ PRZEZ MŁYN SZADEK</span>
             </label>

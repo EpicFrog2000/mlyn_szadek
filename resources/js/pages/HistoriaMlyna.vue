@@ -61,7 +61,7 @@ function changeTexts2(toggle:boolean){
     <div class="bg-form_bg hidden lg:flex flex-col px-8 lg:px-32 text-background w-full lg:h-[200vh] lg:items-center gap-10 lg:gap-10 py-16" id="history_scroll_1">
         <div class="sticky top-[20vh] h-80vh flex lg:flex-row flex-col align-middle items-center justify-center">
             <div v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-300', animateOnce: true }">
-                <transition name="fade" mode="out-in" class="w-58">
+                <transition name="fade" mode="out-in" class="w-[25vw]">
                     <div v-if="!history_scroll_1_second_part_texts_visible" key="1">
                         <div class="font-barlow text-2xl font-normal">
                             CZĘŚĆ&nbsp;01
@@ -76,14 +76,14 @@ function changeTexts2(toggle:boolean){
                             CZĘŚĆ&nbsp;02
                         </div>
                         <div class="h-9"></div>
-                        <div class="font-platypi text-5xl font-light">
-                            Okres międzywojenny – budowa murowanego młyna
+                         <div class="font-platypi text-4xl font-light"> <!-- mniejsza czcionak bo sie nie mieści i dostaje szkorbutu pięt xdd -->
+                            Okres międzywojenny - budowa murowanego młyna
                         </div>
                     </div>
                 </transition>
             </div>
             <div class="grid grid-cols-1 grid-rows-1 w-full relative" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-300', animateOnce: true }">
-                <img src="/images/img_tmp_home1.jpg" alt="Image" width="380" class="place-self-center object-cover col-1 row-1 aspect-380/525 rounded-lg z-10 w-full lg:w-[82%] lg:min-w-64 max-w-92"/>
+                <img src="/images/img_tmp_home1.jpg" alt="Image" width="380" class="place-self-center object-cover col-1 row-1 aspect-380/525 rounded-lg z-10 w-fit lg:w-[82%] lg:min-w-64 max-w-92"/>
                 <div class="hidden lg:flex flex-col items-center col-1 row-1 h-full w-full relative z-5">
                     <img src="/images/bg_element_small_om.svg" loading="lazy" class="absolute top-0 left-auto right-auto -translate-x-4/5 -translate-y-1/3"/>
                     <img src="/images/bg_element_klos.png" loading="lazy" class="absolute bottom-0 left-auto right-auto translate-x-1/2"/>
@@ -440,7 +440,6 @@ function changeTexts2(toggle:boolean){
                 </div>
             </div>
         </div>
-        <div class="lg:h-25"></div>
     </div>
 
 </template>

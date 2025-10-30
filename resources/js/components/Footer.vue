@@ -23,11 +23,11 @@ function scrollToTop() {
             <div class="bg-linear-to-b from-primary from-0% to-transparent to-100% row-1 col-1 absolute inset-0"></div>
             <div class="bg-linear-to-t from-primary from-0% to-transparent to-100% row-1 col-1 absolute inset-0"></div>
             <div class="py-20 px-[10%] lg:px-[25%] row-1 col-1 text-center relative flex flex-col gap-4 lg:gap-10">
-                <div class="text-background text-2xl lg:text-5xl" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
+                <div class="font-platypi text-background text-2xl lg:text-5xl" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
                     Profesjonalna oferta<br>
                     dla przemysłu spożywczego
                 </div>
-                <div class="m-auto lg:w-[60%]" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
+                <div class="font-corbel text-lg font-normal leading-normal m-auto lg:w-[60%]" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
                     Od lat współpracujemy z zakładami przetwórstwa spożywczego, takimi jak: piekarnie, cukiernie, makaroniarnie, firmy z branży HoReCa oraz z największymi zakładami przetwórstwa paszowego.
                 </div>
             </div>
@@ -36,17 +36,17 @@ function scrollToTop() {
         <div class="px-8 py-8 md:px-32 w-full flex flex-col gap-5">
             <div :class="{ hidden: hide_top_part }">
                 <div class="flex flex-col items-center justify-center lg:grid lg:grid-cols-3 lg:grid-rows-1 align-middle w-full">
-                    <div class="flex flex-col text-secondary lg:ml-auto" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000 delay-300', animateOnce: true }">
-                        <span class="font-barlow text-3xl font-normal">
+                    <div class="flex flex-col lg:ml-auto" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000 delay-300', animateOnce: true }">
+                        <span class="font-barlow text-3xl font-normal text-background">
                             02
                         </span>
                         <div class="lg:h-13"></div>
-                        <span class="text-3xl">
+                        <span class="text-3xl text-secondary font-platypi font-bold leading-normal">
                             Opakowania<br/>
                             przemysłowe
                         </span>
                         <div class="h-5"></div>
-                        <span class="font-corbel text-lg ">
+                        <span class="font-corbel text-lg font-normal leading-normal text-background">
                             Klient B2B
                         </span>
                     </div>
@@ -59,7 +59,7 @@ function scrollToTop() {
                         v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000 delay-300', animateOnce: true }"
                         href="/nasze-maki-b2b"
                         >
-                            <span class="font-corbel text-base tracking-widest">ZOBACZ OFERTĘ B2B</span>
+                            <span class="font-corbel text-base text-tertiary tracking-widest">ZOBACZ OFERTĘ B2B</span>
                         </Button_1>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ function scrollToTop() {
                         REGON 730203330
                     </div>
                 </div>
-                <div class="flex flex-col justify-end items-center text-lg font-medium leading-normal">
+                <div class="flex flex-col justify-end items-center text-lg font-medium leading-normal font-platypi">
                     <Image src="/images/fan_small_white.svg" alt="Image" width="24" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"/>
                     <div class="h-5"></div>
                     <a href="tel:+48 438 215 021" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">+48  43  821  50  21</a>
@@ -87,7 +87,6 @@ function scrollToTop() {
                     </div>
                 </div>
                 <div class="flex flex-col-reverse lg:flex-col items-center lg:items-end justify-between gap-2">
-
                         <Button_1
                         :type="'primary_border'"
                         v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }"
@@ -95,15 +94,12 @@ function scrollToTop() {
                         >
                             <span class="font-corbel text-background text-base tracking-widest">WRÓĆ DO GÓRY</span>
                         </Button_1>
-
                     <div class="flex flex-col lg:flex-wrap gap-2 lg:flex-col text-background font-corbel text-lg items-center lg:items-end" v-animateonscroll="{ enterClass: 'animate-enter fade-in-0 slide-in-from-b-20 animate-duration-1000', animateOnce: true }">
                         <a href="">INSTAGRAM</a>
                         <a href="">FACEBOOK</a>
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
 </template>

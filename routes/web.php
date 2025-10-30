@@ -50,3 +50,6 @@ Route::post('/api/sendContactMail', function (Request $request) {
     //return response()->json(['status'=>'OK'], 200);
 });
 
+Route::get('/{any}', function () {
+	return redirect('/');
+})->where('any', '.*');
