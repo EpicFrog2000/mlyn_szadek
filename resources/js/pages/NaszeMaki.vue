@@ -98,7 +98,7 @@ const products =
         </div>
         <div class="h-24"></div>
         <div class="flex flex-wrap gap-14 px-8 lg:px-32 content-center">
-            <MakaCard v-for="(product, index) in kategoria.products" :key="product.type"
+            <MakaCard v-for="(product) in kategoria.products" :key="product.type"
                 :type="product.type"
                 :title="product.title"
                 :subtitle="product.subtitle"
